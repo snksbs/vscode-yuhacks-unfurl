@@ -14,7 +14,38 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "Unfurl",
+      "properties": {
+        "unfurl.if": {
+          "type": "object",
+          "default": {
+            "label": "if",
+            "description": "if ($condition) { ... }",
+            "snippet": "if(${1:condition}) {\n\t$xTM_SELECTED_TEXT\n}$0"
+          }
+        },
+        "unfurl.ifElse": {
+          "type": "object",
+          "default": {
+            "label": "if",
+            "description": "if ($condition) { ... }",
+            "snippet": "if(${1:condition}) {\n\t$TM_SELECTED_TEXT\n} else {\n\t$2\n}$00"
+          }
+        }
+      }
+    },
     "commands": [
+      {
+        "command": "unfurl.if",
+        "title": "if",
+        "category": "Unfurl Snippet"
+      },
+      {
+        "command": "unfurl.ifElse",
+        "title": "if/else",
+        "category": "Unfurl Snippet"
+      },
       {
         "command": "vscode-yuhacks-unfurl.helloWorld",
         "title": "Hello World"
