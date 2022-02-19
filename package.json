@@ -10,7 +10,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vscode-yuhacks-unfurl.helloWorld"
+    "*"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -22,14 +22,14 @@
           "default": {
             "label": "if",
             "description": "if ($condition) { ... }",
-            "snippet": "if(${1:condition}) {\n\t$xTM_SELECTED_TEXT\n}$0"
+            "snippet": "if(${1:condition}) {\n\t$TM_SELECTED_TEXT\n}$0"
           }
         },
         "unfurl.ifElse": {
           "type": "object",
           "default": {
-            "label": "if",
-            "description": "if ($condition) { ... }",
+            "label": "if/else",
+            "description": "if ($condition) { ... } else { ... }",
             "snippet": "if(${1:condition}) {\n\t$TM_SELECTED_TEXT\n} else {\n\t$2\n}$00"
           }
         }
@@ -45,10 +45,6 @@
         "command": "unfurl.ifElse",
         "title": "if/else",
         "category": "Unfurl Snippet"
-      },
-      {
-        "command": "vscode-yuhacks-unfurl.helloWorld",
-        "title": "Hello World"
       }
     ]
   },
