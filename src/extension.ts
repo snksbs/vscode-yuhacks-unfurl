@@ -36,21 +36,21 @@ const registerCmds = async (
       let hasCmd = cmdList.indexOf(cmdId) != -1;
       let hasCusCmd = cmdList.indexOf(cusCmdId) != -1;
       //apply snippet if the command changed
-      if (hasCmd || hasCusCmd) {
-        hasCmd &&
-          JSON.stringify(oldUnfurlConfig[id]) !==
-            JSON.stringify(unfurlConfig[id]) &&
-          vscode.window.activeTextEditor!.insertSnippet(
-            new vscode.SnippetString(unfurlConfig[id].snippet)
-          );
+      // if (hasCmd || hasCusCmd) {
+      //   hasCmd &&
+      //     JSON.stringify(oldUnfurlConfig[id]) !==
+      //       JSON.stringify(unfurlConfig[id]) &&
+      //     vscode.window.activeTextEditor!.insertSnippet(
+      //       new vscode.SnippetString(unfurlConfig[id].snippet)
+      //     );
 
-        hasCusCmd &&
-          JSON.stringify(oldUnfurlConfig[id]) !==
-            JSON.stringify(unfurlConfig[id]) &&
-          vscode.window.activeTextEditor!.insertSnippet(
-            new vscode.SnippetString(unfurlConfig[id].snippet)
-          );
-      }
+      //   hasCusCmd &&
+      //     JSON.stringify(oldUnfurlConfig[id]) !==
+      //       JSON.stringify(unfurlConfig[id]) &&
+      //     vscode.window.activeTextEditor!.insertSnippet(
+      //       new vscode.SnippetString(unfurlConfig[id].snippet)
+      //     );
+      // }
 
       if (!hasCmd || !hasCusCmd) {
         !hasCmd &&

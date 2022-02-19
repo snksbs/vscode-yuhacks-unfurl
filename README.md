@@ -12,6 +12,20 @@ Unfurl is a VS Code extension that helps you with providing the snippet of code 
 
 - TypeScript: For type safety and to make it easier to work with the backend.
 
+## 🔧 Editing default snippet functions
+
+Go to "Settings" and search for "unfurl._commandname_". You can then modify the properties however you wish.
+
+Example `unfurl.if`:
+
+```json
+{
+  "label": "if",
+  "description": "if ($condition) { ... }",
+  "snippet": "if(${1:condition}) {\n\t$TM_SELECTED_TEXT\n}$0"
+}
+```
+
 ## 🌐 MLH- Best Domain Name from Domain.com
 
 - Any .tech domain will work, for example: unfurl.tech
