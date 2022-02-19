@@ -22,7 +22,7 @@
           "default": {
             "label": "if",
             "description": "if ($condition) { ... }",
-            "snippet": "if(${1:condition}) {\n\t$TM_SELECTED_TEXT\n}$0"
+            "snippet": "issssf(${1:condition}) {\n\t$TM_SELECTED_TEXT\n}$0"
           }
         },
         "unfurl.ifElse": {
@@ -32,6 +32,10 @@
             "description": "if ($condition) { ... } else { ... }",
             "snippet": "if(${1:condition}) {\n\t$TM_SELECTED_TEXT\n} else {\n\t$2\n}$00"
           }
+        },
+        "ufcustom": {
+          "type": "object",
+          "default": {}
         }
       }
     },
